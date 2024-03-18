@@ -44,8 +44,8 @@ async def on_message(message: Message) -> None:
 
     username: str = str(message.author)
     user_message: str = message.content
-    user_id = message.author.id
     channel: str = str(message.channel)
+    user_id = message.author.id
 
     print(f'[{channel}] {username}: "{user_message}"')
     await send_message(message, user_message)
